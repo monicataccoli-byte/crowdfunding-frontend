@@ -1,38 +1,110 @@
-/* HomePage.css */
-body {
-    background-color: #f4f7f6; /* Soft mint-white background */
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --trust-green: #2d6a4f;    /* Your main brand color */
+    --mint-green: #95d5b2;     /* Supporting color */
+    --text-dark: #1b4332;
+    --white: #ffffff;
 }
 
-.home-page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-.home-title {
+/* --- Hero & Branding --- */
+.hero-section {
+    background: linear-gradient(rgba(27, 67, 50, 0.6), rgba(27, 67, 50, 0.6)), 
+                url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: #1b4332; /* Deep Trust Green */
-    font-size: 3rem;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+/* --- THE MAIN TITLE (Pawse Furever) --- */
+.brand-title {
+    font-size: 6rem; /* Massive impact */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    line-height: 1;
+    /* Gradient text using your brand colors */
+    background: linear-gradient(to right, var(--mint-green), var(--white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.slogan {
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.hero-text {
+    font-size: 1.3rem;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+/* --- Button Styling --- */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--mint-green);
+    color: var(--text-dark);
+    padding: 16px 36px;
+    border-radius: 50px;
+    border: none;
     font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.home-subtitle {
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 16px 36px;
+    border-radius: 50px;
+    border: 2px solid var(--white);
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+/* --- Grid Section --- */
+.main-content {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
     text-align: center;
-    color: #576574;
-    font-size: 1.25rem;
+    color: var(--text-dark);
+    font-size: 2.8rem;
+    font-weight: 900;
     margin-bottom: 60px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
 }
 
-#fundraisers-list {
+.fundraiser-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-    gap: 40px; /* More space between cards makes it look cleaner */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
 }

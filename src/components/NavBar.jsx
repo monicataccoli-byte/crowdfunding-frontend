@@ -1,33 +1,27 @@
-import { Link, Outlet } from "react-router-dom";
-import { useAuth } from "../hooks/use-auth.js";
-import "./NavBar.css"; // 1. Add this import
+import { Link, Outlet } from "react-router-dom"; 
+import "./NavBar.css"; 
 
 function NavBar() {
-    const { auth, setAuth } = useAuth();
-
-    const handleLogout = () => {
-      window.localStorage.removeItem("token");
-      setAuth({ token: null });
-    };
-
     return (
-      <div>
-        <nav>
-          <Link to="/">Pawse Furever 🐾</Link> {/* Added a brand name/emoji */}
-          
-          <div className="nav-right"> {/* 2. Wrap these for spacing */}
-            {auth.token ? (
-                <Link to="/" onClick={handleLogout}>
-                    Log Out
+        <>
+            <nav className="navbar">
+                <Link to="/" className="nav-logo">
+                    <span className="logo-icon">🐾</span>
+                    <div className="logo-text-wrapper">
+                        <span className="logo-main">Pawse</span>
+                        <span className="logo-accent">Furever</span>
+                    </div>
                 </Link>
-                ) : (
-                <Link to="/login">Login</Link>
-              )}
-          </div>
-        </nav>
-        <Outlet />
-      </div>
-  );
+                <div className="nav-links">
+                    <Link to="/">Home</Link>
+                    <Link to="/login" className="nav-login-btn">Login</Link>
+                </div>
+            </nav>
+            
+            {/* The Outlet renders the HomePage content below the Nav */}
+            <Outlet /> 
+        </>
+    );
 }
 
 export default NavBar;

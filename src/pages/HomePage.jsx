@@ -1,35 +1,30 @@
-import React from 'react';
-import FundraiserCard from '../components/FundraiserCard';
-import useFundraisers from '../hooks/use-fundraisers';
+import React from "react";
+import { allFundraisers } from "../data"; // Adjust path if your data.js is elsewhere
+import FundraiserCard from "../components/FundraiserCard";
 import "./HomePage.css";
 
 function HomePage() {
-    const { fundraisers, isLoading, error } = useFundraisers();
-
-    if (isLoading) return <p className="loading">Loading our furry friends...</p>;
-    if (error) return <p className="error">Error loading rescues: {error.message}</p>;
-
     return (
-        <div className="home-container">
-            {/* --- HERO SECTION --- */}
+        <div className="homepage-container">
+            {/* Hero Section */}
             <header className="hero-section">
                 <div className="hero-content">
-                    <h1>Pause, stop, look and be a pets hero!</h1>
-                    <p>Every donation directly funds foster days and prevents euthanasia.</p>
+                    <h1 className="brand-title">Pawse Furever</h1>
+                    <p className="slogan">Giving every pet a second chance.</p>
                     <div className="hero-buttons">
-                        <button className="btn-primary" onClick={() => window.scrollTo({top: 600, behavior: 'smooth'})}>View Rescues</button>
+                        <button className="btn-primary">Start a Fundraiser</button>
                         <button className="btn-secondary">How it Works</button>
                     </div>
                 </div>
             </header>
 
-            {/* --- FUNDRAISER GRID --- */}
+            {/* Main Content / Grid */}
             <main className="main-content">
-                <h2 className="section-title">Urgent Pawse Furlife Cases</h2>
+                <h2 className="section-title">Active Fundraisers</h2>
                 <div className="fundraiser-list">
-                    {fundraisers.map((fundraiserData, key) => (
-                        <FundraiserCard key={key} fundraiserData={fundraiserData} />
-                    ))}
+                    {allFundraisers.map((fundraiserData, key) => {
+                        return <FundraiserCard key={key} fundraiserData={fundraiserData} />;
+                    })}
                 </div>
             </main>
         </div>
