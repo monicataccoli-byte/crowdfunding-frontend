@@ -1,0 +1,50 @@
+/* The main navigation bar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Keeps the nav at the top while scrolling */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #b7e4c7; /* Trustworthy Mint Green */
+}
+
+/* Styling for "Pawse Furever 🐾" */
+.brand-logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #2d6a4f; /* Deep Forest Green (Trust) */
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+/* Container for the links on the right */
+.nav-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: #1b4332;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect using your "Compassion Coral" */
+.nav-right a:hover {
+    color: #ff8a8a;
+    transform: translateY(-2px);
+}
+
+/* Ensures your main website content doesn't touch the edges */
+.main-content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}

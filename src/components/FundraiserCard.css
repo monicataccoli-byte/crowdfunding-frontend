@@ -1,11 +1,99 @@
-.Fundraiser-card {
-  width: 100%;
-  border: 1px solid black;
-  box-shadow: 0px 0px 5px gray;
+:root {
+    --trust-green: #2d6a4f;
+    --mint-green: #95d5b2;
+    --text-dark: #1b4332;
 }
 
-.fundraiser-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+/* --- Hero Section Styling --- */
+.hero-section {
+    background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(45, 106, 79, 0.7)), 
+                url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    margin-bottom: 50px;
 }
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    max-width: 900px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--mint-green);
+    color: var(--text-dark);
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: 2px solid white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* --- Grid Styling --- */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+
+.fundraiser-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 100px;
+    font-size: 1.5rem;
+    color: var(--trust-green);
+}
+

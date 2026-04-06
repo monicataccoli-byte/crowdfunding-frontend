@@ -19,6 +19,7 @@
            { path: "/fundraiser/:id", element: <FundraiserPage /> },
        ],
    },
+   
  ]);
 
  ReactDOM.createRoot(document.getElementById("root")).render(

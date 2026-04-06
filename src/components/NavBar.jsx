@@ -1,14 +1,32 @@
 import { Link, Outlet } from "react-router-dom";
+import { useAuth } from "../hooks/use-auth.js";
+import "./NavBar.css"; // 1. Add this import
 
 function NavBar() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/login">Log In</Link>
-      </nav>
-      <Outlet />
-    </div>
+    const { auth, setAuth } = useAuth();
+
+    const handleLogout = () => {
+      window.localStorage.removeItem("token");
+      setAuth({ token: null });
+    };
+
+    return (
+      <div>
+        <nav>
+          <Link to="/">Pawse Furever 🐾</Link> {/* Added a brand name/emoji */}
+          
+          <div className="nav-right"> {/* 2. Wrap these for spacing */}
+            {auth.token ? (
+                <Link to="/" onClick={handleLogout}>
+                    Log Out
+                </Link>
+                ) : (
+                <Link to="/login">Login</Link>
+              )}
+          </div>
+        </nav>
+        <Outlet />
+      </div>
   );
 }
 

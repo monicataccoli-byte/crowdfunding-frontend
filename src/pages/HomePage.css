@@ -1,6 +1,38 @@
-#fundraiser-list {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  column-gap: 10px;
-  row-gap: 10px;
+/* HomePage.css */
+body {
+    background-color: #f4f7f6; /* Soft mint-white background */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.home-title {
+    text-align: center;
+    color: #1b4332; /* Deep Trust Green */
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.home-subtitle {
+    text-align: center;
+    color: #576574;
+    font-size: 1.25rem;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+#fundraisers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 40px; /* More space between cards makes it look cleaner */
 }
