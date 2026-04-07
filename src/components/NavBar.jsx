@@ -1,31 +1,20 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import './NavBar.css';
+import "./NavBar.css";
 
-const NavBar = () => {
-    return (
-        <>
-            <nav className="navbar">
-                <Link to="/" className="nav-logo">
-                    <div className="logo-container">
-                        <span className="logo-icon">🐾</span>
-                        <div className="logo-text">
-                            <span className="logo-main">Pawse</span>
-                            <span className="logo-accent">Furever</span>
-                        </div>
-                    </div>
-                </Link>
+function NavBar() {
+  return (
+    <nav className="navbar">
 
-                <div className="nav-links">
-                    <Link to="/">Home</Link>
-                    <Link to="/login" className="nav-login-btn">Login</Link>
-                </div>
-            </nav>
-            <main>
-                <Outlet />
-            </main>
-        </>
-    );
-};
+      <div className="logo">
+        <h2>Pawse Furever</h2>
+      </div>
+
+      <div className="nav-links">
+        <a href="/">Home</a>
+        <button className="login-btn">Login</button>
+      </div>
+
+    </nav>
+  );
+}
 
 export default NavBar;

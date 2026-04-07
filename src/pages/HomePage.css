@@ -1,110 +1,74 @@
-:root {
-    --trust-green: #2d6a4f;    /* Your main brand color */
-    --mint-green: #95d5b2;     /* Supporting color */
-    --text-dark: #1b4332;
-    --white: #ffffff;
+.homepage {
+  width: 100%;
 }
 
-/* --- Hero & Branding --- */
-.hero-section {
-    background: linear-gradient(rgba(27, 67, 50, 0.6), rgba(27, 67, 50, 0.6)), 
-                url('https://unsplash.com');
-    background-size: cover;
-    background-position: center;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    padding: 0 20px;
+/* HERO SECTION */
+.hero {
+  height: 85vh;
+  background-color: #6f8f84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --- THE MAIN TITLE (Pawse Furever) --- */
-.brand-title {
-    font-size: 6rem; /* Massive impact */
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 0;
-    line-height: 1;
-    /* Gradient text using your brand colors */
-    background: linear-gradient(to right, var(--mint-green), var(--white));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+/* CENTER CONTENT */
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
 }
 
-.slogan {
-    font-size: 2.2rem;
-    font-weight: 400;
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+/* TITLE */
+.hero h1 {
+  font-size: 4rem;
+  color: #e4f2ec;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
 
-.hero-text {
-    font-size: 1.3rem;
-    max-width: 650px;
-    margin: 0 auto 40px;
-    opacity: 0.9;
+/* SUBTEXT */
+.hero p {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 30px;
 }
 
-/* --- Button Styling --- */
+/* BUTTON CONTAINER */
 .hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.btn-primary {
-    background-color: var(--mint-green);
-    color: var(--text-dark);
-    padding: 16px 36px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 800;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.2s;
+/* PRIMARY BUTTON */
+.primary-btn {
+  background-color: #9ed3b8;
+  color: black;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.btn-secondary {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    padding: 16px 36px;
-    border-radius: 50px;
-    border: 2px solid var(--white);
-    font-weight: 800;
-    font-size: 1.1rem;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
+/* SECONDARY BUTTON */
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  border: 2px solid white;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--text-dark);
+/* HOVER EFFECT */
+.primary-btn:hover {
+  opacity: 0.9;
 }
 
-/* --- Grid Section --- */
-.main-content {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 2.8rem;
-    font-weight: 900;
-    margin-bottom: 60px;
-}
-
-.fundraiser-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 40px;
+.secondary-btn:hover {
+  background-color: white;
+  color: #6f8f84;
 }
