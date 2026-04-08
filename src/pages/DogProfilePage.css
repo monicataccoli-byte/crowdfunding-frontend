@@ -1,0 +1,154 @@
+.dog-profile-page {
+  min-height: 100vh;
+  background-color: #7a968a;
+  padding: 32px 24px 70px;
+}
+
+.dog-profile-card {
+  max-width: 1180px;
+  margin: 0 auto;
+  background-color: #f4f7f5;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: minmax(320px, 430px) minmax(320px, 1fr);
+}
+
+.dog-profile-image-wrap {
+  background-color: white;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.dog-profile-image {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+.dog-profile-content {
+  padding: 32px 28px;
+}
+
+.dog-profile-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7a968a;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 10px;
+}
+
+.dog-profile-content h1 {
+  font-size: 2.2rem;
+  color: #173c37;
+  margin-bottom: 16px;
+}
+
+.dog-profile-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 24px;
+  color: #45615b;
+}
+
+.dog-profile-details p {
+  margin: 0;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section h2 {
+  font-size: 1.1rem;
+  color: #173c37;
+  margin-bottom: 8px;
+}
+
+.profile-section p {
+  color: #45615b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.promise-box {
+  background-color: white;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.profile-donate-button {
+  background-color: #7a968a;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 13px 18px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.back-link {
+  text-decoration: none;
+  background-color: #173c37;
+  color: white;
+  border-radius: 14px;
+  padding: 13px 18px;
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.dog-profile-not-found {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #f4f7f5;
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .dog-profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dog-profile-image-wrap {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dog-profile-page {
+    padding: 24px 16px 50px;
+  }
+
+  .dog-profile-content {
+    padding: 24px 18px;
+  }
+
+  .dog-profile-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .dog-profile-details {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-buttons {
+    flex-direction: column;
+  }
+}

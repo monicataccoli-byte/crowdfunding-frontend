@@ -1,99 +1,97 @@
-:root {
-    --trust-green: #2d6a4f;
-    --mint-green: #95d5b2;
-    --text-dark: #1b4332;
+.fundraiser-card {
+  background-color: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
 }
 
-/* --- Hero Section Styling --- */
-.hero-section {
-    background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(45, 106, 79, 0.7)), 
-                url('https://unsplash.com');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-    margin-bottom: 50px;
+.fundraiser-card-image-wrap {
+  width: 100%;
+  height: 250px;
+  background-color: #f4f7f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
-    max-width: 900px;
+.fundraiser-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-.hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 500;
+.fundraiser-card-content {
+  padding: 20px;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+.fundraiser-card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7a968a;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
 }
 
-.btn-primary {
-    background-color: var(--mint-green);
-    color: var(--text-dark);
-    padding: 14px 32px;
-    border-radius: 50px;
-    border: none;
-    font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+.fundraiser-card h3 {
+  font-size: 1.5rem;
+  color: #173c37;
+  margin-bottom: 12px;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: white;
-    padding: 14px 32px;
-    border-radius: 50px;
-    border: 2px solid white;
-    font-weight: 700;
-    cursor: pointer;
+.fundraiser-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin-bottom: 14px;
+  color: #45615b;
+  font-size: 0.95rem;
 }
 
-.btn-primary:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+.fundraiser-details p {
+  margin: 0;
 }
 
-/* --- Grid Styling --- */
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 80px;
+.fundraiser-card-description {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #45615b;
+  margin-bottom: 18px;
 }
 
-.section-title {
-    text-align: center;
-    color: var(--text-dark);
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    font-weight: 900;
+.fundraiser-card-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.fundraiser-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 35px;
+.fundraiser-card-button {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.loading, .error {
-    text-align: center;
-    padding: 100px;
-    font-size: 1.5rem;
-    color: var(--trust-green);
+.fundraiser-card-button.primary {
+  background-color: #7a968a;
+  color: white;
 }
 
+.fundraiser-card-button.secondary {
+  background-color: #173c37;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .fundraiser-card-buttons {
+    flex-direction: column;
+  }
+}

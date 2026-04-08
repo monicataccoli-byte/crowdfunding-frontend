@@ -1,0 +1,60 @@
+.fundraiser-page {
+  min-height: 100vh;
+  background-color: #7a968a;
+  padding: 32px 24px 70px;
+}
+
+.fundraiser-page-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 34px;
+}
+
+.fundraiser-page-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f4f7f5;
+  margin-bottom: 14px;
+}
+
+.fundraiser-page-header h1 {
+  font-size: 2.5rem;
+  color: #173c37;
+  margin-bottom: 16px;
+}
+
+.fundraiser-page-header p {
+  color: #f4f7f5;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.fundraiser-page-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 1000px) {
+  .fundraiser-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .fundraiser-page {
+    padding: 24px 16px 50px;
+  }
+
+  .fundraiser-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .fundraiser-page-grid {
+    grid-template-columns: 1fr;
+  }
+}

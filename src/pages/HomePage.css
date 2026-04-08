@@ -1,74 +1,213 @@
 .homepage {
-  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f4f7f5, #edf4f0);
+  padding: 32px 24px 70px;
 }
 
-/* HERO SECTION */
-.hero {
-  height: 85vh;
-  background-color: #6f8f84;
+.hero-intro {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 30px;
+}
+
+.hero-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a968a;
+  margin-bottom: 14px;
+}
+
+.hero-intro h1 {
+  font-size: 2.7rem;
+  color: #173c37;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #45615b;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.homepage-layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-button {
+  background-color: #ffffff;
+  color: #173c37;
+  border: 2px solid #b8d1c4;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-button.primary {
+  background-color: #7a968a;
+  color: white;
+  border-color: #7a968a;
+}
+
+.featured-area {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-/* CENTER CONTENT */
-.hero-content {
-  text-align: center;
+.pucci-card {
+  width: 100%;
   max-width: 900px;
+  background-color: white;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(320px, 1fr);
+}
+
+.pucci-image-wrap {
+  background-color: #f4f7f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
   padding: 20px;
 }
 
-/* TITLE */
-.hero h1 {
-  font-size: 4rem;
-  color: #e4f2ec;
-  letter-spacing: 3px;
+.pucci-image {
+  width: 100%;
+  height: 100%;
+  max-height: 460px;
+  object-fit: contain;
+  display: block;
+}
+
+.pucci-content {
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7a968a;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
   margin-bottom: 10px;
 }
 
-/* SUBTEXT */
-.hero p {
-  font-size: 1.4rem;
-  font-style: italic;
-  color: #ffffff;
-  margin-bottom: 30px;
+.pucci-content h2 {
+  font-size: 2rem;
+  color: #173c37;
+  margin-bottom: 12px;
 }
 
-/* BUTTON CONTAINER */
-.hero-buttons {
+.pucci-meta {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #45615b;
 }
 
-/* PRIMARY BUTTON */
-.primary-btn {
-  background-color: #9ed3b8;
-  color: black;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 25px;
+.pucci-description {
   font-size: 1rem;
-  cursor: pointer;
+  line-height: 1.7;
+  color: #45615b;
+  margin-bottom: 22px;
 }
 
-/* SECONDARY BUTTON */
-.secondary-btn {
-  background-color: transparent;
+.care-promise-box {
+  background-color: #f4f7f5;
+  border: 1px solid #dce8e1;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.care-promise-box h3 {
+  font-size: 1.08rem;
+  color: #173c37;
+  margin-bottom: 10px;
+}
+
+.care-promise-box p {
+  color: #45615b;
+  line-height: 1.6;
+}
+
+.view-all-button {
+  text-decoration: none;
+  text-align: center;
+  background-color: #7a968a;
   color: white;
-  padding: 15px 25px;
-  border-radius: 25px;
-  border: 2px solid white;
-  font-size: 1rem;
-  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 16px;
+  font-weight: 700;
 }
 
-/* HOVER EFFECT */
-.primary-btn:hover {
-  opacity: 0.9;
+@media (max-width: 820px) {
+  .homepage-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    max-width: 280px;
+  }
+
+  .pucci-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pucci-image-wrap {
+    min-height: 340px;
+  }
+
+  .pucci-image {
+    max-height: 320px;
+  }
 }
 
-.secondary-btn:hover {
-  background-color: white;
-  color: #6f8f84;
+@media (max-width: 700px) {
+  .homepage {
+    padding: 24px 16px 50px;
+  }
+
+  .hero-intro h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .pucci-content {
+    padding: 22px 18px;
+  }
+
+  .pucci-content h2 {
+    font-size: 1.6rem;
+  }
 }

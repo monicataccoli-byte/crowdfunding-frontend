@@ -1,39 +1,26 @@
-import { useParams } from "react-router-dom";
-import useFundraiser from "../hooks/use-fundraiser";
+import FundraiserCard from "../components/FundraiserCard";
+import { allFundraisers } from "../data";
+import "./FundraiserPage.css";
 
 function FundraiserPage() {
-    // Here we use a hook that comes for free in react router called `useParams` to get the id from the URL so that we can pass it to our useFundraiser hook.
-   const { id } = useParams();
-   // useFundraiser returns three pieces of info, so we need to grab them all here
-   const { fundraiser, isLoading, error } = useFundraiser(id); 
- 
-   if (isLoading) {
-       return (<p>loading...</p>)
-   }
+  return (
+    <main className="fundraiser-page">
+      <section className="fundraiser-page-header">
+        <p className="fundraiser-page-tag">All Fundraisers</p>
+        <h1>Support Every Pawse Furlife</h1>
+        <p>
+          Browse all current animal care fundraisers and help provide food,
+          shelter, medical care, and long-term dignity.
+        </p>
+      </section>
 
-   if (error) {
-       return (<p>{error.message}</p>)
-   }
-
-    return (
-        <div>
-           <h2>{fundraiser.title}</h2>
-           <h3>Created at: {fundraiser.date_created}</h3>
-           <h3>{`Status: ${fundraiser.is_open}`}</h3>
-           <h3>Pledges:</h3>
-           <ul>
-               {fundraiser.pledges.map((pledgeData, key) => {
-    
-                   return (
-                       <li key={key}>
-                           {pledgeData.amount} from {pledgeData.supporter}
-                       </li>
-                   );
-               })}
-           </ul>
-       </div>
-   );
+      <section className="fundraiser-page-grid">
+        {allFundraisers.map((fundraiser) => (
+          <FundraiserCard key={fundraiser.id} fundraiser={fundraiser} />
+        ))}
+      </section>
+    </main>
+  );
 }
-
 
 export default FundraiserPage;

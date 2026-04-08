@@ -1,41 +1,19 @@
-import React from "react";
-import { allFundraisers } from "../data";
-import FundraiserCard from "../components/FundraiserCard";
-import "./HomePage.css";
-
-function HomePage() {
-  return (
-    <div className="home-container">
-
-      {/* HERO SECTION */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <h1>PAWSE FUREVER</h1>
-          <p>Be a Pet’s Saviour</p>
-
-          <div className="hero-buttons">
-            <button className="primary-btn">Start a Fundraiser</button>
-            <button className="secondary-btn">How it Works</button>
-          </div>
-        </div>
-      </section>
-
-      {/* FUNDRAISERS */}
-      <section className="fundraiser-section">
-        <h2>Our Furry Fundraisers</h2>
-
-        <div className="fundraiser-grid">
-          {allFundraisers.map((fundraiser) => (
-            <FundraiserCard
-              key={fundraiser.id}
-              fundraiserData={fundraiser}
-            />
-          ))}
-        </div>
-      </section>
-
-    </div>
-  );
+.navbar {
+  background-color: #173c37;
+  color: #f4f7f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
 }
 
-export default HomePage;
+.navbar a {
+  color: #f4f7f5;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #cfe3dc;
+}
