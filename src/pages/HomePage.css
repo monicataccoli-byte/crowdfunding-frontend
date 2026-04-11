@@ -10,6 +10,25 @@
   margin: 0 auto 30px;
 }
 
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.hero-logo-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #7a968a, #5f7f73);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 10px 24px rgba(23, 60, 55, 0.16);
+}
+
 .hero-tag {
   font-size: 0.9rem;
   font-weight: 700;
@@ -20,7 +39,7 @@
 }
 
 .hero-intro h1 {
-  font-size: 2.7rem;
+  font-size: 2.9rem;
   color: #173c37;
   line-height: 1.1;
   margin-bottom: 16px;
@@ -40,7 +59,7 @@
   gap: 26px;
   align-items: start;
   max-width: 1250px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 
 .sidebar {
@@ -59,6 +78,12 @@
   font-weight: 600;
   text-align: left;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-button:hover {
+  border-color: #7a968a;
+  transform: translateY(-1px);
 }
 
 .sidebar-button.primary {
@@ -166,6 +191,153 @@
   padding: 12px 18px;
   border-radius: 16px;
   font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.view-all-button:hover {
+  background-color: #668579;
+}
+
+.fundraiser-grid-section {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.section-heading-wrap {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 28px;
+}
+
+.section-kicker {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #7a968a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  font-size: 2.1rem;
+  color: #173c37;
+  margin-bottom: 14px;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #45615b;
+}
+
+.fundraiser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.fundraiser-card {
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+}
+
+.fundraiser-image-wrap {
+  background-color: #f4f7f5;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.fundraiser-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.fundraiser-card-content {
+  padding: 20px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fundraiser-breed {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #7a968a;
+  margin-bottom: 8px;
+}
+
+.fundraiser-card h3 {
+  font-size: 1.35rem;
+  color: #173c37;
+  margin-bottom: 10px;
+}
+
+.fundraiser-card-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #45615b;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.fundraiser-card-description {
+  color: #45615b;
+  line-height: 1.65;
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+}
+
+.fundraiser-card-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-badge {
+  display: inline-block;
+  width: fit-content;
+  background-color: #eef5f1;
+  color: #173c37;
+  border: 1px solid #d9e7df;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.card-link-button {
+  text-decoration: none;
+  text-align: center;
+  background-color: #173c37;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.card-link-button:hover {
+  background-color: #28534d;
+}
+
+@media (max-width: 1100px) {
+  .fundraiser-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 820px) {
@@ -188,6 +360,10 @@
   .pucci-image {
     max-height: 320px;
   }
+
+  .fundraiser-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
@@ -196,7 +372,7 @@
   }
 
   .hero-intro h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 
   .hero-text {
@@ -209,5 +385,13 @@
 
   .pucci-content h2 {
     font-size: 1.6rem;
+  }
+
+  .section-heading {
+    font-size: 1.7rem;
+  }
+
+  .fundraiser-image-wrap {
+    height: 220px;
   }
 }
