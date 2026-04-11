@@ -1,157 +1,49 @@
 .site-header {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 90px 1fr 120px;
+  align-items: center;
   background-color: #173c37;
-  color: #f4f7f5;
-  box-sizing: border-box;
+  padding: 12px 20px;
 }
 
-.top-bar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 28px;
+.nav-left {
   display: flex;
+  justify-content: flex-start;
+}
+
+.brand-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  min-height: 88px;
 }
 
-.nav-spacer {
-  width: 180px;
+.brand-icon {
+  width: 52px;
+  height: 52px;
 }
 
-.site-title-wrap {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.nav-center {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-logo-circle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #7a968a, #5f7f73);
-  display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  flex-shrink: 0;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
 }
 
-.site-title-wrap:hover .nav-logo-circle {
-  transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
-}
-
-.nav-logo-house {
-  position: absolute;
-  color: white;
-}
-
-.nav-logo-heart {
-  position: absolute;
-  color: #173c37;
-  transform: translate(5px, 5px);
-}
-
-.site-title-text {
+.nav-center h1 {
+  margin: 0;
+  font-size: 1.3rem;
   color: #f4f7f5;
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 0.4px;
+  letter-spacing: 1px;
   white-space: nowrap;
 }
 
-.top-nav {
+.nav-right {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  justify-content: flex-end;
 }
 
-.nav-link {
-  color: #f4f7f5;
-  text-decoration: none;
-  font-size: 1.15rem;
-  font-weight: 600;
-}
-
-.nav-link:hover {
-  color: #cfe3dc;
-}
-
-.nav-pill {
-  background-color: #aeb8ae;
+.login-button {
+  background-color: #f4f7f5;
   color: #173c37;
-  text-decoration: none;
-  padding: 10px 20px;
+  padding: 8px 18px;
   border-radius: 999px;
-  font-size: 1.15rem;
+  text-decoration: none;
   font-weight: 700;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.nav-pill:hover {
-  background-color: #c7d0c6;
-  transform: translateY(-1px);
-}
-
-@media (max-width: 900px) {
-  .top-bar {
-    padding: 16px 20px;
-    min-height: 76px;
-  }
-
-  .nav-spacer {
-    width: 120px;
-  }
-
-  .site-title-text {
-    font-size: 1.35rem;
-  }
-
-  .top-nav {
-    gap: 14px;
-  }
-
-  .nav-link,
-  .nav-pill {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .top-bar {
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    padding: 16px;
-  }
-
-  .nav-spacer {
-    display: none;
-  }
-
-  .site-title-wrap {
-    position: static;
-    transform: none;
-  }
-
-  .top-nav {
-    justify-content: center;
-  }
-
-  .site-title-text {
-    font-size: 1.2rem;
-    text-align: center;
-  }
 }

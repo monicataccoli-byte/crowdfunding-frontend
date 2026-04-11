@@ -1,33 +1,42 @@
-import { Link } from "react-router-dom";
-import { Heart, House } from "lucide-react";
-import "./NavBar.css";
-
-function NavBar() {
+function BrandIcon({ className = "" }) {
   return (
-    <header className="site-header">
-      <div className="top-bar">
-        <div className="nav-spacer" />
+    <svg
+      viewBox="0 0 64 64"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* background circle */}
+      <circle cx="32" cy="32" r="30" fill="#7a968a" />
 
-        <div className="site-title-wrap">
-          <div className="nav-logo-circle" aria-hidden="true">
-            <House className="nav-logo-house" size={20} strokeWidth={2.2} />
-            <Heart className="nav-logo-heart" size={12} strokeWidth={2.4} />
-          </div>
+      {/* house outline */}
+      <path
+        d="M20 30 L32 20 L44 30"
+        fill="none"
+        stroke="#f4f7f5"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <rect
+        x="24"
+        y="30"
+        width="16"
+        height="14"
+        fill="none"
+        stroke="#f4f7f5"
+        strokeWidth="3"
+        rx="2"
+      />
 
-          <div className="site-title-text">Pawse Furlife Furever</div>
-        </div>
-
-        <nav className="top-nav">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
-          <Link to="/login" className="nav-pill">
-            Login
-          </Link>
-        </nav>
-      </div>
-    </header>
+      {/* heart INSIDE the house */}
+      <path
+        d="M32 36 
+           C30 33, 26 33, 26 36 
+           C26 39, 32 43, 32 43 
+           C32 43, 38 39, 38 36 
+           C38 33, 34 33, 32 36 Z"
+        fill="#f4f7f5"
+      />
+    </svg>
   );
 }
-
-export default NavBar;
