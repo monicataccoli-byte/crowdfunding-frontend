@@ -1,12 +1,12 @@
-export const allFundraisers = [
+export const dogDetails = [
   {
     id: 1,
     title: "Pucci",
     breed: "Pomeranian",
-    age: "5 years old",
+    age: "Adult",
     sex: "Female",
     vaccinated: "Yes",
-    neutered: "No",
+    neutered: "Yes",
     description:
       "Pucci is a gentle companion currently in care and in need of daily support for food, shelter, and veterinary care.",
     story:
@@ -32,7 +32,7 @@ export const allFundraisers = [
     age: "11 years old",
     sex: "Male",
     vaccinated: "Yes",
-    neutered: "No",
+    neutered: "Yes",
     description:
       "Mojo is a cheerful older dog who loves comfort, company, and gentle daily care.",
     story:
@@ -53,11 +53,11 @@ export const allFundraisers = [
   {
     id: 3,
     title: "ZaZa",
-    breed: "Chihuahua",
-    age: "3 years old",
+    breed: "Mixed Breed",
+    age: "Young",
     sex: "Female",
     vaccinated: "Yes",
-    neutered: "Yes",
+    neutered: "No",
     description:
       "ZaZa is full of spirit and needs a safe place, steady care, and support while waiting for the right home.",
     story:
@@ -78,8 +78,8 @@ export const allFundraisers = [
   {
     id: 4,
     title: "Rocky",
-    breed: "Pomeranian",
-    age: "10 years old",
+    breed: "Bulldog",
+    age: "Senior",
     sex: "Male",
     vaccinated: "Yes",
     neutered: "Yes",
@@ -103,8 +103,8 @@ export const allFundraisers = [
   {
     id: 5,
     title: "Flo",
-    breed: "Pomeranian",
-    age: "11 years old",
+    breed: "Spaniel",
+    age: "Puppy",
     sex: "Female",
     vaccinated: "No",
     neutered: "No",
@@ -129,7 +129,7 @@ export const allFundraisers = [
     id: 6,
     title: "Timmy",
     breed: "Terrier",
-    age: "5 years and 4 months old",
+    age: "Young",
     sex: "Male",
     vaccinated: "Yes",
     neutered: "Yes",
@@ -177,4 +177,12 @@ export const allFundraisers = [
   },
 ];
 
-export const oneFundraiser = allFundraisers[0];
+export const allFundraisers = dogDetails;
+
+export const oneFundraiser = dogDetails[0];
+
+export function findDogDetailByTitle(title) {
+  return dogDetails.find(
+    (dog) => dog.title.toLowerCase() === String(title).toLowerCase()
+  );
+}

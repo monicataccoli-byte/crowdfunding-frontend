@@ -35,9 +35,12 @@ function FundraiserCard({ fundraiser }) {
             View Profile
           </Link>
 
-          <button className="fundraiser-card-button primary">
+          <Link
+            to={`/fundraisers/${fundraiser.id}`}
+            className="fundraiser-card-button primary"
+          >
             Kindly Donate
-          </button>
+          </Link>
         </div>
       </div>
     </article>

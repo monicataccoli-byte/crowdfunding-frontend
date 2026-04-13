@@ -44,7 +44,6 @@
 
 .fundraiser-details {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 6px;
   margin-bottom: 14px;
   color: #45615b;

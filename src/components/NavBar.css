@@ -1,9 +1,10 @@
 .site-header {
   display: grid;
-  grid-template-columns: 90px 1fr 120px;
+  grid-template-columns: 90px 1fr 170px;
   align-items: center;
   background-color: #173c37;
   padding: 12px 20px;
+  border-bottom: 2px solid #7a968a;
 }
 
 .nav-left {
@@ -11,14 +12,27 @@
   justify-content: flex-start;
 }
 
-.brand-link {
+.logo-link {
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
 }
 
-.brand-icon {
+.logo-circle {
   width: 52px;
   height: 52px;
+  border-radius: 50%;
+  background-color: #7a968a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .nav-center {
@@ -40,10 +54,35 @@
 }
 
 .login-button {
+  display: inline-block;
   background-color: #f4f7f5;
   color: #173c37;
   padding: 8px 18px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: 70px 1fr 140px;
+    padding: 10px 14px;
+  }
+
+  .logo-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-center h1 {
+    font-size: 1rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .login-button {
+    padding: 7px 12px;
+    font-size: 0.85rem;
+  }
 }

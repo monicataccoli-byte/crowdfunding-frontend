@@ -1,0 +1,81 @@
+.login-page {
+  min-height: 100vh;
+  background-color: #7a968a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px 70px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background-color: #f4f7f5;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+.login-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.login-toggle button {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: white;
+  color: #173c37;
+}
+
+.login-toggle button.active {
+  background-color: #173c37;
+  color: white;
+}
+
+.login-card h1 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+  color: #173c37;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form label {
+  font-weight: 700;
+  color: #173c37;
+}
+
+.login-form input {
+  border: 1px solid #c8d9d0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 14px;
+  padding: 13px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #7a968a;
+  color: white;
+  cursor: pointer;
+}
+
+.login-message {
+  margin-top: 18px;
+  font-weight: 700;
+  color: #173c37;
+}

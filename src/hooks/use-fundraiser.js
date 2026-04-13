@@ -1,26 +1,13 @@
-import { useState, useEffect } from "react";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://crowdfunding-monicat-27513b5965d8.herokuapp.com";
 
-import getFundraiser from "../api/get-fundraiser";
+export async function getFundraiser(id) {
+  const response = await fetch(`${API_BASE_URL}/fundraisers/${id}/`);
 
-export default function useFundraiser(fundraiserId) {
-  const [fundraiser, setFundraiser] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState();
+  if (!response.ok) {
+    throw new Error("Failed to fetch fundraiser.");
+  }
 
-  useEffect(() => {
-    // Here we pass the fundraiserId to the getFundraiser function.
-    getFundraiser(fundraiserId)
-      .then((fundraiser) => {
-        setFundraiser(fundraiser);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setIsLoading(false);
-      });
-
-    // This time we pass the fundraiserId to the dependency array so that the hook will re-run if the fundraiserId changes.
-  }, [fundraiserId]);
-
-  return { fundraiser, isLoading, error };
+  return await response.json();
 }

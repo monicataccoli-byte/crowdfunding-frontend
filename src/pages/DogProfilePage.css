@@ -50,6 +50,12 @@
   margin-bottom: 16px;
 }
 
+.dog-profile-warning {
+  color: #173c37;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
 .dog-profile-details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

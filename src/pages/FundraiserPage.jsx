@@ -8,10 +8,9 @@ function FundraiserPage() {
       <section className="fundraiser-page-header">
         <p className="fundraiser-page-tag">All Fundraisers</p>
         <h1>Support Every Pawse Furlife</h1>
-        <p className="fundraiser-page-text">
+        <p>
           Browse all current animal care fundraisers and help provide food,
-          shelter, medical care, and long-term dignity for dogs awaiting
-          adoption or lifelong sanctuary.
+          shelter, medical care, and long-term dignity.
         </p>
       </section>
 
