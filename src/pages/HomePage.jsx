@@ -1,69 +1,58 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { oneFundraiser } from "../data";
-import house from "../assets/house.png";
+import houseLogo from "../assets/house.png";
+import { dogDetails } from "../data";
+import FundraiserCard from "../components/FundraiserCard";
 import "./HomePage.css";
 
 function HomePage() {
   return (
-    <main className="homepage">
-      <section className="hero-intro">
+    <main className="home-page">
+      <section className="hero-section">
+        <div className="hero-logo-wrap">
+          <img src={houseLogo} alt="Pawse Furlife Furever logo" className="hero-logo" />
+        </div>
 
-        {/* NEW IMAGE LOGO */}
-        <img src={house} alt="Pawse Furlife Logo" className="hero-logo" />
+        <p className="hero-tag">BE A PET&apos;S SAVIOUR</p>
 
-        <p className="hero-tag">Be a Pet&apos;s Saviour</p>
+        <h1 className="hero-title">Pawse Furlife Furever</h1>
 
-        <h1>Pawse Furlife Furever</h1>
-
-        <p className="hero-text">
-          A compassionate crowdfunding platform supporting safe housing, care,
-          and dignity for animals awaiting adoption or lifelong sanctuary.
+        <p className="hero-subtitle">
+          Saving pets lives with Pawse Furlife Furever
         </p>
+
+        <div className="home-page-layout">
+          <aside className="hero-sidebar">
+            <Link to="/login" className="sidebar-button primary">
+              Start a Fundraiser
+            </Link>
+            <a href="#how-it-works" className="sidebar-button">
+              How It Works
+            </a>
+            <Link to="/fundraisers" className="sidebar-button">
+              Donate Now
+            </Link>
+            <a href="#featured-fundraisers" className="sidebar-button">
+              Success Stories
+            </a>
+          </aside>
+
+          <section className="hero-intro">
+            <p>
+              A compassionate crowdfunding platform supporting safe housing, care,
+              and dignity for animals awaiting adoption or lifelong sanctuary.
+            </p>
+          </section>
+        </div>
       </section>
 
-      <section className="homepage-layout">
-        <aside className="sidebar">
-          <button className="sidebar-button primary">Start a Fundraiser</button>
-          <button className="sidebar-button">How It Works</button>
-          <button className="sidebar-button">Donate Now</button>
-          <button className="sidebar-button">Success Stories</button>
-        </aside>
-
-        <section className="featured-area">
-          <div className="pucci-card">
-            <div className="pucci-image-wrap">
-              <img
-                src={oneFundraiser.image}
-                alt={oneFundraiser.title}
-                className="pucci-image"
-              />
-            </div>
-
-            <div className="pucci-content">
-              <p className="featured-label">Featured Pawse Furlife</p>
-              <h2>{oneFundraiser.title}</h2>
-
-              <div className="pucci-meta">
-                <span>{oneFundraiser.breed}</span>
-                <span>{oneFundraiser.age}</span>
-              </div>
-
-              <p className="pucci-description">
-                {oneFundraiser.description}
-              </p>
-
-              <div className="homepage-actions">
-                <Link to="/fundraisers" className="view-all-button">
-                  View All Fundraisers
-                </Link>
-
-                <Link to="/login" className="secondary-action-button">
-                  Login / Register
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+      <section id="featured-fundraisers" className="featured-section">
+        <h2>Featured Fundraisers</h2>
+        <div className="fundraiser-preview-grid">
+          {dogDetails.slice(0, 3).map((fundraiser) => (
+            <FundraiserCard key={fundraiser.id} fundraiser={fundraiser} />
+          ))}
+        </div>
       </section>
     </main>
   );

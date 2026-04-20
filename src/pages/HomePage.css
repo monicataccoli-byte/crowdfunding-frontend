@@ -1,245 +1,175 @@
-.homepage {
-  min-height: 100vh;
+.home-page {
   background-color: #f4f7f5;
-  padding: 24px;
+  min-height: 100vh;
 }
 
-.hero-intro {
+.hero-section {
+  background-color: #7a968a;
+  color: white;
+  padding: 48px 20px 60px;
   text-align: center;
-  max-width: 980px;
-  margin: 0 auto 30px;
+}
+
+.hero-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .hero-logo {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  margin-bottom: 16px;
-}
-
-.hero-tag {
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #7a968a;
-  margin-bottom: 14px;
-}
-
-.hero-intro h1 {
-  font-size: 3.2rem;
-  color: #173c37;
-  line-height: 1.1;
-  margin: 0 0 18px;
-  font-weight: 800;
-  white-space: nowrap;
-}
-
-.hero-text {
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #45615b;
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.homepage-layout {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  gap: 26px;
-  align-items: start;
-  max-width: 1250px;
-  margin: 32px auto 0;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.sidebar-button {
-  background-color: #ffffff;
-  color: #173c37;
-  border: 2px solid #b8d1c4;
-  border-radius: 14px;
-  padding: 10px 12px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
-}
-
-.sidebar-button.primary {
-  background-color: #7a968a;
-  color: white;
-  border-color: #7a968a;
-}
-
-.featured-area {
-  display: flex;
-  justify-content: center;
-}
-
-.pucci-card {
-  width: 100%;
-  max-width: 900px;
-  background-color: white;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
-  display: grid;
-  grid-template-columns: minmax(320px, 420px) minmax(320px, 1fr);
-}
-
-.pucci-image-wrap {
-  background-color: #f4f7f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 500px;
-  padding: 20px;
-}
-
-.pucci-image {
-  width: 100%;
-  height: 100%;
-  max-height: 460px;
-  object-fit: contain;
   display: block;
 }
 
-.pucci-content {
-  padding: 30px 28px;
+.hero-tag {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #eaf0ec;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 3.8rem;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #f4f7f5;
+}
+
+.hero-subtitle {
+  margin: 18px 0 0;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #f4f7f5;
+}
+
+.home-page-layout {
+  max-width: 1100px;
+  margin: 34px auto 0;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: start;
+  text-align: left;
+}
+
+.hero-sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.featured-label {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #7a968a;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  margin-bottom: 10px;
-}
-
-.pucci-content h2 {
-  font-size: 2rem;
-  color: #173c37;
-  margin-bottom: 12px;
-}
-
-.pucci-meta {
-  display: flex;
   gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #45615b;
 }
 
-.pucci-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #45615b;
-  margin-bottom: 22px;
-}
-
-.care-promise-box {
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 2px solid #d7e2dc;
   background-color: #f4f7f5;
-  border: 1px solid #dce8e1;
-  border-radius: 18px;
-  padding: 18px;
-  margin-bottom: 22px;
-}
-
-.care-promise-box h3 {
-  font-size: 1.08rem;
   color: #173c37;
-  margin-bottom: 10px;
-}
-
-.care-promise-box p {
-  color: #45615b;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.homepage-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.view-all-button,
-.secondary-action-button {
+  font-size: 1rem;
+  font-weight: 700;
   text-decoration: none;
   text-align: center;
-  padding: 12px 18px;
-  border-radius: 16px;
-  font-weight: 700;
+  transition: 0.2s ease;
 }
 
-.view-all-button {
-  background-color: #7a968a;
-  color: white;
-}
-
-.secondary-action-button {
+.sidebar-button.primary {
   background-color: #173c37;
-  color: white;
+  color: #ffffff;
+  border-color: #173c37;
 }
 
-@media (max-width: 980px) {
-  .hero-intro h1 {
-    white-space: normal;
-    font-size: 2.6rem;
+.hero-intro {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 28px 30px;
+  color: #f4f7f5;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hero-intro p {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.featured-section {
+  padding: 56px 20px 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-section h2 {
+  margin: 0 0 28px;
+  font-size: 2.2rem;
+  color: #173c37;
+  text-align: center;
+}
+
+.fundraiser-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+@media (max-width: 1000px) {
+  .hero-title {
+    font-size: 3rem;
   }
-}
 
-@media (max-width: 820px) {
-  .homepage-layout {
+  .home-page-layout {
     grid-template-columns: 1fr;
   }
 
-  .sidebar {
-    max-width: 280px;
+  .hero-sidebar {
+    max-width: 520px;
+    margin: 0 auto;
   }
 
-  .pucci-card {
-    grid-template-columns: 1fr;
-  }
-
-  .pucci-image-wrap {
-    min-height: 340px;
-  }
-
-  .pucci-image {
-    max-height: 320px;
+  .fundraiser-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 700px) {
-  .homepage {
-    padding: 24px 16px 50px;
+  .hero-section {
+    padding: 38px 16px 46px;
   }
 
-  .hero-intro h1 {
-    font-size: 2.2rem;
+  .hero-logo {
+    width: 92px;
+    height: 92px;
   }
 
-  .hero-text {
-    font-size: 1rem;
+  .hero-title {
+    font-size: 2.35rem;
   }
 
-  .pucci-content {
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-intro {
     padding: 22px 18px;
   }
 
-  .pucci-content h2 {
-    font-size: 1.6rem;
+  .hero-intro p {
+    font-size: 1.05rem;
+  }
+
+  .featured-section {
+    padding: 42px 16px 56px;
+  }
+
+  .featured-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .fundraiser-preview-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
+import houseLogo from "../assets/house.png";
 import "./NavBar.css";
-import Logo from "./Logo";
 
 function NavBar() {
   return (
     <header className="site-header">
       <div className="nav-left">
-        <Link to="/" className="logo-link">
-          <div className="logo-circle">
-            <Logo />
-          </div>
+        <Link to="/" className="logo-circle" aria-label="Go to homepage">
+          <img src={houseLogo} alt="Pawse Furlife Furever logo" className="logo-image" />
         </Link>
       </div>
 

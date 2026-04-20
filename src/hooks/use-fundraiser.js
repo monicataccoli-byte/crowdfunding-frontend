@@ -1,13 +1,18 @@
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL ||
-  "https://crowdfunding-monicat-27513b5965d8.herokuapp.com";
+import { useState, useEffect } from "react";
 
-export async function getFundraiser(id) {
-  const response = await fetch(`${API_BASE_URL}/fundraisers/${id}/`);
+export function useFundraisers() {
+  const [fundraisers, setFundraisers] = useState([]);
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch fundraiser.");
-  }
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}/fundraisers/`)
+      .then((response) => response.json())
+      .then((data) => {
+        setFundraisers(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
-  return await response.json();
+  return fundraisers;
 }

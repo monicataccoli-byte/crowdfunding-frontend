@@ -1,8 +1,10 @@
 import FundraiserCard from "../components/FundraiserCard";
-import { allFundraisers } from "../data";
+import useFundraisers from "../hooks/use-fundraisers";
 import "./FundraiserPage.css";
 
 function FundraiserPage() {
+  const { fundraisers, isLoading, error } = useFundraisers();
+
   return (
     <main className="fundraiser-page">
       <section className="fundraiser-page-header">
@@ -14,8 +16,11 @@ function FundraiserPage() {
         </p>
       </section>
 
+      {isLoading && <p>Loading fundraisers...</p>}
+      {error && <p>{error}</p>}
+
       <section className="fundraiser-page-grid">
-        {allFundraisers.map((fundraiser) => (
+        {fundraisers.map((fundraiser) => (
           <FundraiserCard key={fundraiser.id} fundraiser={fundraiser} />
         ))}
       </section>
